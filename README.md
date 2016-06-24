@@ -9,8 +9,9 @@
 
 ##效果
 
-    入口页面
-    build/cover.html
+[入口页面](https://soonyh.github.io/fw/cover.html)
+
+    
 
 
 
