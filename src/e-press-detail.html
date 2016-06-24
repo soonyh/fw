@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FASTENER</title>
+  @@global-css
+</head>
+
+<body>
+  <div class="page-group">
+    <div class="page">
+      @@global-header @@global-bar-tab
+      <div class="content press-detail">
+        <div class="swiper-container" data-space-between='10' style="height:100%; overflow-y:auto;">
+          <!-- 幻燈片必須等高，推薦尺寸：500x309 -->
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="news-head">
+                <div class="pic">
+                  <img src="resources/pic/book.jpg">
+                </div>
+              </div>
+              <div class="content-block press-intro">                
+                <img src="resources/pic/press-logo-1.png" alt="" class="press-logo">
+                <div class="news-title">
+                  <h1>五金零件組雜誌</h1>
+                  <div class="subhead"><a href="##" class="pull-right read"><i class="iconfont icon-eye"></i>READ</a><a href="e-press.html" class="pull-right read" style="margin-right:20px;"><i class="iconfont icon-eye"></i>MORE</a>8月號<span>39期</span>
+                  </div>
+                </div>
+                <p>該描述符定義了字符外觀的特征，其被用於匹配樣式到指定外觀的過程中。對於被定義擁有多個@font-face規則的字體家族，用戶代理可以下載所有家族中的外觀，也可以使用這些描述符有選擇地下載匹配文檔中使用的實際樣式的字體外觀。該描述符定義了字符外觀的特征，其被用於匹配樣式到指定外觀的過程中。對於被定義擁有多個@font-face規則的字體家族，用戶代理可以下載所有家族中的外觀，也可以使用這些描述符有選擇地下載匹配文檔中使用的實際樣式的字體外觀。</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="news-head">
+                <div class="pic">
+                  <img src="resources/pic/book.jpg">
+                </div>
+              </div>
+              <div class="content-block press-intro">
+                <img src="resources/pic/press-logo-1.png" alt="" class="press-logo">
+                <div class="news-title">
+                  <h1>五金零件組雜誌</h1>
+                  <div class="subhead"><a href="##" class="pull-right read"><i class="iconfont icon-eye"></i>READ</a>8月號<span>40期</span>
+                  </div>
+                </div>
+                <p>介紹刊物或別的資訊內容</p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="swiper-pagination"></div> -->
+          <div class="swiper-button-prev arrow hidden"></div>
+          <div class="swiper-button-next arrow hidden"></div>
+        </div>
+      </div>
+    </div>
+    @@global-panel
+  </div>
+  @@global-js
+  <script type='text/javascript' src='resources/plugins/sui/js/sm-extend.min.js' charset='utf-8'></script>
+  <script>
+    $(function() {
+      App.init();
+      $(".swiper-container").swiper({
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
+        scrollbarSnapOnRelease: true,
+        paginationClickable: true,
+        spaceBetween: 10,
+        loop: true
+      });
+      //設置左右箭頭的位置
+      var setArrow = function() {
+        setTimeout(function() {
+          $('.arrow').removeClass('hidden').css('top', $('.news-head').height() / 2);
+        }, 100)
+      }
+      setArrow();
+      window.onresize = setArrow;
+    });
+  </script>
+
+</body>
+
+</html>

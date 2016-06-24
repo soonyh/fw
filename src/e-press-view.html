@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FASTENER</title>
+  @@global-css
+</head>
+
+<body>
+  <div class="page-group">
+    <div class="page">
+      @@global-header @@global-bar-tab
+      <div class="content press-detail">
+        <div class="swiper-container" data-space-between='10' style="height:100%; overflow-y:auto;">
+          <!-- 幻燈片必須等高，推薦尺寸：500x309 -->
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Page1 <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            </div>
+            <div class="swiper-slide">Page2
+            </div>
+          </div>
+          <!-- <div class="swiper-pagination"></div> -->
+          <div class="swiper-button-prev arrow" style="position:fixed"></div>
+          <div class="swiper-button-next arrow" style="position:fixed"></div>
+        </div>
+      </div>
+    </div>
+    @@global-panel
+  </div>
+  @@global-js
+  <script type='text/javascript' src='resources/plugins/sui/js/sm-extend.min.js' charset='utf-8'></script>
+  <script>
+    $(function() {
+      App.init();
+      $(".swiper-container").swiper({
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
+        scrollbarSnapOnRelease: true,
+        paginationClickable: true,
+        spaceBetween: 10,
+        loop: true
+      });
+
+    });
+  </script>
+
+</body>
+
+</html>

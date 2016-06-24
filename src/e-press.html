@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FASTENER</title>
+  @@global-css
+</head>
+
+<body>
+  <div class="page-group">
+    <div class="page">
+      @@global-header @@global-bar-tab
+      <div class="content search">
+        <form action="result.html">
+          <div class="list-block">
+            <ul>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-input">
+                      <select id="select-year">
+                        <option value="22016">2016</option>
+                        <option value="22015">2015</option>
+                        <option value="22014">2014</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="e-press item-content">
+                  <div class="row item-inner" id="press-list">
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </div>
+    @@global-panel
+  </div>
+  @@global-js
+  <script src="resources/js/e-press.js"></script>
+  <script type="text/html" id="art-press">
+  {{each list}}
+    <div class="col-33">
+      <a href="{{$value.link}}"><img src="{{$value.pic}}" alt="{{$value.title}}">
+      <div class="press-title">{{$value.title}}</div>
+      </a>
+    </div>
+  {{/each}}  
+  </script>
+  <script>
+    $(function() {
+      App.init();
+      Press.init();
+    })
+  </script>
+
+</body>
+
+</html>

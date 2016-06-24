@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FASTENER</title>
+  @@global-css
+</head>
+
+<body>
+  <div class="page-group">
+    <div class="page">
+      @@global-header @@global-bar-tab
+      <div class="content company">
+        <!-- Slider -->
+        <div class="swiper-container" data-space-between='10'>
+          <!-- 幻燈片必須等高，推薦尺寸：500x309 -->          
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="resources/pic/5.jpg" alt="">
+            </div>
+            <div class="swiper-slide"><img src="resources/pic/3.jpg" alt="">
+            </div>
+            <div class="swiper-slide"><img src="resources/pic/4.jpg" alt="">
+            </div>
+          </div>
+          <!-- <div class="swiper-pagination"></div> -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="content-block">
+          <h1>謀求復興的沃爾沃</h1>
+          <p class="about-us">關於我們</p>
+          <p>謀求復興的沃爾沃，亦將目光鎖定到了緊湊型細分市場。近日，沃爾沃在瑞典哥德堡正式發布了其全新CMA（Compact Modular Architecture）豪華緊湊型整車平臺架構，填補了其在緊湊級產品線平臺的空白，這壹做法被視為推動沃爾沃實現持續性增長的重要因素。</p>
+          <dl class="company-dl clearfix">
+            <dt>國家</dt>
+            <dd>CHINA</dd>
+          </dl>
+          <dl class="company-dl clearfix">
+            <dt>地址</dt>
+            <dd>亦將目光鎖定到了緊湊型細分市場</dd>
+          </dl>
+          <dl class="company-dl clearfix">
+            <dt>電話</dt>
+            <dd>123-4567889</dd>
+          </dl>
+          <dl class="company-dl clearfix">
+            <dt>傳真</dt>
+            <dd>http://www.baidu.com</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    @@global-panel
+  </div>
+  @@global-js
+  <script type='text/javascript' src='resources/plugins/sui/js/sm-extend.min.js' charset='utf-8'></script>
+  <script>
+    App.init();
+    $(function() {
+      $(".swiper-container").swiper({
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 10,
+        loop: true
+      });
+    });
+  </script>
+</body>
+
+</html>

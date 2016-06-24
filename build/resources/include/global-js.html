@@ -1,0 +1,84 @@
+<script type='text/javascript' src='resources/plugins/zepto.min.js' charset='utf-8'>
+</script>
+<script>
+  $.config = {router: false}
+</script>
+<script type='text/javascript' src='resources/plugins/sui/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='resources/plugins/template.js' charset='utf-8'></script>
+<script type='text/javascript' src='resources/js/app.js' charset='utf-8'></script>
+<!-- build:remove -->
+<script type='text/javascript' src='../mock/mock.js' charset='utf-8'></script>
+<script>
+  var Random = Mock.Random;
+  Mock.setup({
+    timeout: 1500
+  });
+  Mock.mock(/list1.json/, {
+    'list|1-5': [{
+      "title": "@word(5,15)",
+      "subhead": "@word(15,25)",
+      "category":1,
+      "summary": "@paragraph",
+      "link": "hot-news-1.html",
+      "pic": function() {
+        return Random.dataImage('450x500', 'Hello!')
+      },
+      "year": 2016,
+      "day": function() {
+        return Random.date('MM/dd')
+      },
+      "type|1": ["五金建材", "美洲新闻", "世界大会", "科技资讯"]
+    }]
+  })
+  Mock.mock(/list2.json/, {
+    'list|1-5': [{
+      "title": "@word(5,15)",
+      "subhead": "@word(15,25)",
+      "category":2,
+      "summary": "@paragraph",
+      "link": "hot-news-2.html",
+      "pic": function() {
+        return Random.dataImage('450x500', 'Hello!')
+      },
+      "year": 2016,
+      "day": function() {
+        return Random.date('MM/dd')
+      },
+      "type|1": ["五金建材", "美洲新闻", "世界大会", "科技资讯"]
+    }]
+  })
+  Mock.mock(/list3.json/, {
+    'list|5-8': [{
+      "title": "@word(5,15)",
+      "summary": "@paragraph",
+      "link": "company.html"
+    }]
+  })
+
+  Mock.mock(/list4.json/, {
+    'list|1-5': [{
+      "title": "@word(5,15)",
+      "subhead": "@word(15,25)",
+      "category":1,
+      "link": "show-news.html",
+      "pic|1":['resources/pic/2.jpg','resources/pic/3.jpg','resources/pic/4.jpg']
+    }]
+  })
+  Mock.mock(/list5.json/, {
+    'list|1-5': [{
+      "title": "@word(5,15)",
+      "subhead": "@word(15,25)",
+      "category":2,
+      "link": "show-news.html",
+      "pic|1":['resources/pic/2.jpg','resources/pic/3.jpg','resources/pic/4.jpg']
+    }]
+  })
+  Mock.mock(/list6.json/, {
+    'list|1-6': [{
+      "title": "@word(5,15)",
+      "link": "e-press-detail.html?id=1",
+      "pic|1":['resources/pic/e1.jpg','resources/pic/e2.jpg','resources/pic/e3.jpg']
+    }]
+  })
+</script>
+<!-- /build -->

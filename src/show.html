@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FASTENER</title>
+  @@global-css
+</head>
+
+<body>
+  <div class="page-group">
+    <div class="page">
+      @@global-header @@global-bar-tab
+      <div class="bar bar-header-secondary pd0 t2-2 height2">
+        <div class="buttons-tab">
+          <a href="#tab1" class="tab-link active button t0 button-style2">展前報道</a>
+          <a href="#tab2" class="tab-link button t0 button-style2">展後新聞</a>
+        </div>
+      </div>
+      <div class="content pull-to-refresh-content">
+        <!-- 默認的下拉刷新層 -->
+        <div class="pull-to-refresh-layer">
+          <div class="preloader"></div>
+          <div class="pull-to-refresh-arrow"></div>
+        </div>
+        <div class="tabs">
+          <div id="tab1" class="tab active">
+            <!-- content應該擁有"pull-to-refresh-content"類,表示啟用下拉刷新 -->
+            <div class="infinite-scroll" data-distance="30">
+
+              <div class="content-padded">
+                <div class="row grid" id="tab1-content">
+                </div>
+              </div>
+
+              <!-- 加載提示符 -->
+              <div class="infinite-scroll-preloader hidden">
+                <div class="preloader">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="tab2" class="tab">
+            <!-- content應該擁有"pull-to-refresh-content"類,表示啟用下拉刷新 -->
+            <div class="infinite-scroll" data-distance="30">
+
+              <div class="content-padded">
+                <div class="row grid" id="tab2-content"></div>
+              </div>
+
+              <div class="infinite-scroll-preloader hidden">
+                <div class="preloader">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    @@global-panel
+  </div>
+  @@global-js
+  <!-- item 模板 -->
+  <script type="text/html" id="art-item">
+    {{each list}}
+    <div class="col-50">
+      <a href="{{$value.link}}">
+        <div class="pic"><img src="{{$value.pic}}" alt="">
+        </div>
+        <div class="grid-title">{{$value.title}}</div>
+        <div class="subhead purple">{{$value.subhead}}</div>
+      </a>
+    </div>
+    {{/each}}
+  </script>
+  <script src="resources/js/show.js"></script>
+
+  <script>
+    $(function() {
+      App.init();
+      Show.init();
+    })
+  </script>
+
+</body>
+
+</html>

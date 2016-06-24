@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FASTENER</title>
+  @@global-css
+</head>
+
+<body>
+  <div class="page-group">
+    <div class="page">
+      @@global-header
+      <div class="content" style="background:#fff;">
+        <a href="hot.html" class="active home-bg home-bg1"><i class="icon iconfont icon-article"></i> 最新消息</a>
+        <a href="show.html" class="home-bg home-bg2"><i class="icon iconfont icon-globe"></i> 展覽訊息</a>
+        <a href="e-press.html" class="home-bg home-bg3"><i class="icon iconfont icon-book"></i> 電子刊物</a>
+        <a href="search.html" class="home-bg home-bg4"><i class="icon iconfont icon-search"></i> 搜尋介面</a>
+      </div>
+    </div>
+    @@global-panel
+  </div>
+  @@global-js
+  <script>
+  App.init();
+    //返回一个包含可视区域宽和高属性的对象(兼容各浏览器) 
+    //有滚动条时，不计算滚动条的宽度        
+    function getViewPort() {
+      var e = window,
+        a = 'inner';
+      if (!('innerWidth' in window)) {
+        a = 'client';
+        e = document.documentElement || document.body;
+      }
+      return {
+        width: e[a + 'Width'],
+        height: e[a + 'Height']
+      }
+    }
+
+    function autoSize() {
+      var header = $('header').height();
+      var h = (getViewPort().height - header - 15) / 4;
+      $('.home-bg').css({'height':h,'fontSize': h/4.5,'lineHeight':h+'px'});
+      $('.home-bg .iconfont').css({'fontSize': h/4.5});
+      $('.content').css('overflow','hidden');
+    }
+    window.onresize = autoSize;
+    setTimeout(autoSize,1);
+  </script>
+
+</body>
+
+</html>

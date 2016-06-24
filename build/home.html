@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FASTENER</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="resources/plugins/sui/css/sm.min.css">
+<link rel="stylesheet" href="resources/plugins/sui/css/sm-extend.min.css">
+<link rel="stylesheet" href="resources/css/custom.css">
+
+</head>
+
+<body>
+  <div class="page-group">
+    <div class="page">
+      <header class="bar bar-nav">
+  <a class="open-panel pull-left iconfont icon-menu icon" data-panel='#panel-left'> </a>
+  <a class="pull-right iconfont icon-search1 icon" href="search.html"> </a>
+  <h1 class="title"><i class="iconfont icon-logo"></i></h1> 
+</header>
+
+
+      <div class="content" style="background:#fff;">
+        <a href="hot.html" class="active home-bg home-bg1"><i class="icon iconfont icon-article"></i> 最新消息</a>
+        <a href="show.html" class="home-bg home-bg2"><i class="icon iconfont icon-globe"></i> 展覽訊息</a>
+        <a href="e-press.html" class="home-bg home-bg3"><i class="icon iconfont icon-book"></i> 電子刊物</a>
+        <a href="search.html" class="home-bg home-bg4"><i class="icon iconfont icon-search"></i> 搜尋介面</a>
+      </div>
+    </div>
+    <div class="panel-overlay"></div>
+<!-- Left Panel with Reveal effect -->
+<div class="panel panel-left panel-reveal panel-fw" id='panel-left'>
+  <ul>
+    <li><a href="hot.html" class="active"><i class="icon iconfont icon-article"></i> 最新消息</a>
+    </li>
+    <li><a href="show.html" class=""><i class="icon iconfont icon-globe"></i> 展覽訊息</a>
+    </li>
+    <li><a href="e-press.html" class=""><i class="icon iconfont icon-book"></i> 電子刊物</a>
+    </li>
+    <li><a href="search.html" class=""><i class="icon iconfont icon-search"></i> 搜尋介面</a>
+    </li>
+  </ul>
+  <a class="bar-logo" href="home.html"><i class="iconfont icon-logo" style="font-size: 1.8rem;"></i></a>
+</div>
+
+  </div>
+  <script type='text/javascript' src='resources/plugins/zepto.min.js' charset='utf-8'>
+</script>
+<script>
+  $.config = {router: false}
+</script>
+<script type='text/javascript' src='resources/plugins/sui/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='resources/plugins/template.js' charset='utf-8'></script>
+<script type='text/javascript' src='resources/js/app.js' charset='utf-8'></script>
+<!-- build:remove -->
+<script type='text/javascript' src='../mock/mock.js' charset='utf-8'></script>
+<script>
+  var Random = Mock.Random;
+  Mock.setup({
+    timeout: 1500
+  });
+  Mock.mock(/list1.json/, {
+    'list|1-5': [{
+      "title": "@word(5,15)",
+      "subhead": "@word(15,25)",
+      "category":1,
+      "summary": "@paragraph",
+      "link": "hot-news-1.html",
+      "pic": function() {
+        return Random.dataImage('450x500', 'Hello!')
+      },
+      "year": 2016,
+      "day": function() {
+        return Random.date('MM/dd')
+      },
+      "type|1": ["五金建材", "美洲新闻", "世界大会", "科技资讯"]
+    }]
+  })
+  Mock.mock(/list2.json/, {
+    'list|1-5': [{
+      "title": "@word(5,15)",
+      "subhead": "@word(15,25)",
+      "category":2,
+      "summary": "@paragraph",
+      "link": "hot-news-2.html",
+      "pic": function() {
+        return Random.dataImage('450x500', 'Hello!')
+      },
+      "year": 2016,
+      "day": function() {
+        return Random.date('MM/dd')
+      },
+      "type|1": ["五金建材", "美洲新闻", "世界大会", "科技资讯"]
+    }]
+  })
+  Mock.mock(/list3.json/, {
+    'list|5-8': [{
+      "title": "@word(5,15)",
+      "summary": "@paragraph",
+      "link": "company.html"
+    }]
+  })
+
+  Mock.mock(/list4.json/, {
+    'list|1-5': [{
+      "title": "@word(5,15)",
+      "subhead": "@word(15,25)",
+      "category":1,
+      "link": "show-news.html",
+      "pic|1":['resources/pic/2.jpg','resources/pic/3.jpg','resources/pic/4.jpg']
+    }]
+  })
+  Mock.mock(/list5.json/, {
+    'list|1-5': [{
+      "title": "@word(5,15)",
+      "subhead": "@word(15,25)",
+      "category":2,
+      "link": "show-news.html",
+      "pic|1":['resources/pic/2.jpg','resources/pic/3.jpg','resources/pic/4.jpg']
+    }]
+  })
+  Mock.mock(/list6.json/, {
+    'list|1-6': [{
+      "title": "@word(5,15)",
+      "link": "e-press-detail.html?id=1",
+      "pic|1":['resources/pic/e1.jpg','resources/pic/e2.jpg','resources/pic/e3.jpg']
+    }]
+  })
+</script>
+<!-- /build -->
+
+  <script>
+  App.init();
+    //返回一个包含可视区域宽和高属性的对象(兼容各浏览器) 
+    //有滚动条时，不计算滚动条的宽度        
+    function getViewPort() {
+      var e = window,
+        a = 'inner';
+      if (!('innerWidth' in window)) {
+        a = 'client';
+        e = document.documentElement || document.body;
+      }
+      return {
+        width: e[a + 'Width'],
+        height: e[a + 'Height']
+      }
+    }
+
+    function autoSize() {
+      var header = $('header').height();
+      var h = (getViewPort().height - header - 15) / 4;
+      $('.home-bg').css({'height':h,'fontSize': h/4.5,'lineHeight':h+'px'});
+      $('.home-bg .iconfont').css({'fontSize': h/4.5});
+      $('.content').css('overflow','hidden');
+    }
+    window.onresize = autoSize;
+    setTimeout(autoSize,1);
+  </script>
+
+</body>
+
+</html>

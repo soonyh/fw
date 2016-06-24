@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FASTENER</title>
+  @@global-css
+</head>
+
+<body>
+  <div class="page-group">
+    <div class="page">
+      @@global-header @@global-bar-tab
+      <div class="content search">
+        <form action="result.html">
+          <div class="list-block">
+            <ul>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-input">
+                      <input type="text" placeholder="請輸入關鍵字">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-input">
+                      <select>
+                        <option value="產品">產品</option>
+                        <option value="產商">產商</option>
+                        <option value="新聞">新聞</option>
+                        <option value="關鍵字">關鍵字</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-block text-center">
+            <button class="button button-big button-fill" type="submit">Search</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    @@global-panel
+  </div>
+  @@global-js
+
+  <script>
+    App.init();
+  </script>
+
+</body>
+
+</html>

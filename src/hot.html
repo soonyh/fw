@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FASTENER</title>
+  @@global-css
+</head>
+
+<body>
+  <div class="page-group">
+    <div class="page">
+      @@global-header @@global-bar-tab
+      <div class="bar bar-header-secondary pd0 t2-2 height2">
+        <div class="buttons-tab">
+          <a href="#tab1" class="tab-link active button t0 button-style1">最新消息</a>
+          <a href="#tab2" class="tab-link button t0 button-style1">產業新聞</a>
+        </div>
+      </div>
+
+      <!-- content應該擁有"pull-to-refresh-content"類,表示啟用下拉刷新 -->
+      <div class="content pull-to-refresh-content">
+        <!-- 默認的下拉刷新層 -->
+        <div class="pull-to-refresh-layer">
+          <div class="preloader"></div>
+          <div class="pull-to-refresh-arrow"></div>
+        </div>
+        <div class="tabs">
+          <div id="tab1" class="tab active">
+            <div class="infinite-scroll infinite-scroll-bottom" data-distance="30">
+              <div class="list-block media-list">
+                <ul id="tab1-ul">
+                </ul>
+              </div>
+              <!-- 加載提示符 -->
+              <div class="infinite-scroll-preloader hidden">
+                <div class="preloader">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="tab2" class="tab">
+            <div class="infinite-scroll infinite-scroll-bottom" data-distance="30">
+              <div class="list-block media-list">
+                <ul id="tab2-ul">
+                </ul>
+              </div>
+              <div class="infinite-scroll-preloader hidden">
+                <div class="preloader">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    @@global-panel
+  </div>
+  @@global-js
+  <!-- 列表 模板 -->
+  <script type="text/html" id="art-item">
+    {{each list}}
+    <li>
+      <a class="item-content item-link" href="{{$value.link}}">
+        <div class="item-media"><img src="{{$value.pic}}">
+          <div class="item-media-info">
+            <div class="item-media-year">{{$value.year}}</div>
+            <div class="item-media-day">{{$value.day}}</div>
+            <div class="item-media-type">{{$value.type}}</div>
+          </div>
+        </div>
+        <div class="item-inner">
+          <div class="item-title-row">
+            <div class="item-title">{{$value.title}}</div>
+          </div>
+          <div class="item-subtitle {{$value.category | theme }}">{{$value.subhead}}</div>
+          <div class="item-text">{{$value.summary}}</div>
+        </div>
+      </a>
+    </li>
+    {{/each}}
+  </script>
+  <script>
+    template.helper('theme', function(category) {
+      return category == 1 ? 'orange' : 'vine';
+    });
+  </script>
+  <script src="resources/js/hot.js"></script>
+
+  <script>
+    $(function(){
+      App.init();
+      Hot.init();
+    })
+  </script>
+
+</body>
+
+</html>

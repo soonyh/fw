@@ -1,0 +1,227 @@
+@charset "UTF-8";
+body { font-family: 微软雅黑, 'Microsoft YaHei'; }
+
+.pd0 { padding: 0; }
+
+.absolute { position: absolute; }
+
+.t2-2 { top: 2.2rem !important; }
+
+.height2 { height: 2rem !important; }
+
+.t4-2 { top: 4.2rem !important; }
+
+.t0 { top: 0 !important; }
+
+.hidden { display: none; }
+
+.vine { color: #acd257 !important; }
+
+.orange { color: #f6b240 !important; }
+
+.purple { color: #aaa7d1 !important; }
+
+.text-center { text-align: center; }
+
+/*自定义图标*/
+@font-face { font-family: "iconfont"; src: url("../fonts/iconfont.eot?t=1464853464");
+  /* IE9*/
+src: url("../fonts/iconfont.eot?t=1464853464#iefix") format("embedded-opentype"), url("../fonts/iconfont.woff?t=1464853464") format("woff"), url("../fonts/iconfont.ttf?t=1464853464") format("truetype"), url("../fonts/iconfont.svg?t=1464853464#iconfont") format("svg");
+  /* iOS 4.1- */ }
+.iconfont { font-family: "iconfont" !important; font-size: 16px; font-style: normal; -webkit-font-smoothing: antialiased; -webkit-text-stroke-width: 0.2px; -moz-osx-font-smoothing: grayscale; }
+
+.icon-globe:before { content: "\e72e"; }
+
+.icon-search:before { content: "\e621"; }
+
+.icon-menu:before { content: "\e633"; }
+
+.icon-eye:before { content: "\e7a0"; }
+
+.icon-search1:before { content: "\e60b"; }
+
+.icon-book:before { content: "\e606"; }
+
+.icon-article:before { content: "\e608"; }
+
+.icon-logo:before { content: "\e600"; }
+
+.title i.icon-logo { color: #fff; font-size: 1.6rem; }
+
+header .iconfont { color: #fff; }
+
+/*自定义content容器*/
+.content2 { position: absolute; top: 4.2rem; left: 0; bottom: 0; right: 0; }
+
+.bar-tab ~ .content2 { bottom: 2.5rem; }
+
+/*重置page*/
+.page { background: #fff; }
+
+/*重置一级header bar*/
+.bar { background-color: #071931; }
+
+.bar .title img { height: 1.3rem; vertical-align: middle; width: auto; }
+
+.bar-tab .tab-item { color: #fff; }
+
+/*重置bar-nav*/
+.bar-tab .tab-item.active, .bar-tab .tab-item:active { color: #73c8cd; }
+
+/*重置二级header bar内的tab 按钮*/
+/*重置tab组件的按钮样式*/
+.buttons-tab .button { color: #fff; }
+
+.buttons-tab .button-style1 { color: #73c8cd; }
+
+.buttons-tab .button-style1.active { background-color: #73c8cd; color: #fff; border-bottom: none; }
+
+.buttons-tab .button-style2 { color: #bcb3d6; }
+
+.buttons-tab .button-style2.active { background-color: #bcb3d6; color: #fff; border-bottom: none; }
+
+/*重置media-list类型的列表*/
+.media-list { margin: 0; }
+
+.media-list ul::before { background-color: transparent; }
+
+.media-list .item-inner::after { background-color: transparent; }
+
+.media-list li { border-bottom: 1px solid #e7e7e7; }
+
+.media-list .item-content { height: 5rem; padding-left: 0; }
+
+.list-block.media-list .item-media { padding: 0; position: relative; }
+
+.media-list .item-media img { width: 4.5rem; height: 5rem; vertical-align: middle; }
+
+.media-list .item-media .item-media-info { position: absolute; padding: 1rem 0; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); color: #fff; text-align: center; }
+
+.media-list .item-media .item-media-year, .media-list .item-media .item-media-type { height: 0.5rem; line-height: 0.5rem; font-size: 0.6rem; }
+
+.media-list .item-media .item-media-day { height: 2rem; line-height: 2rem; font-size: 1.3rem; font-weight: bold; }
+
+.media-list .item-inner .item-title { height: 1.3rem; line-height: 1.3rem; font-size: 20px; color: #000; }
+
+.media-list .item-inner .item-text { margin-top: 0.2rem; line-height: 0.8rem; height: 1.6rem; font-size: 14px; }
+
+.media-list .item-subtitle { font-size: 14px; }
+
+/*侧边栏*/
+.panel-fw { background-color: #ddd; color: #535152; font-size: .85rem; position: relative; }
+.panel-fw .bar-logo { position: absolute; bottom: .8rem; text-align: center; width: 100%; display: block; color: #535152; }
+.panel-fw ul { margin: 1.2rem 0 0; padding: 0; }
+.panel-fw ul li { list-style: none; }
+.panel-fw ul li a { background-color: #ddd; display: block; line-height: 2.2rem; color: #535152; padding: 0 .75rem; text-align: center; margin-bottom: 1px; }
+.panel-fw ul li a .icon { padding-right: 10px; font-size: 1rem; }
+.panel-fw ul li a:active, .panel-fw ul li a.active { -webkit-transition-duration: 0ms; transition-duration: 0ms; background-color: #5a5657; color: #fff; }
+
+/********************************** 
+* cover.html ********************************/
+.cover { width: 100%; height: 100%; background-image: url(../img/cover-bg.jpg); background-size: cover; vertical-align: middle; }
+.cover .cover-content { display: block; height: 120px; width: 100%; position: absolute; left: 0; top: 50%; margin-top: -60px; font-size: 20px; color: #fff; text-align: center; }
+.cover .cover-content .icon-logo { font-size: 60px; }
+
+/********************************** 
+* home.html ********************************/
+.home-bg1 { background-image: url(../img/home-bg1.jpg); }
+
+.home-bg2 { background-image: url(../img/home-bg2.jpg); }
+
+.home-bg3 { background-image: url(../img/home-bg3.jpg); }
+
+.home-bg4 { background-image: url(../img/home-bg4.jpg); width: 100%; margin-bottom: 0; }
+
+.home-bg { background-size: 100% auto; color: #171c61; vertical-align: middle; display: block; text-align: center; background-position: center center; width: 100%; margin-bottom: 5px; }
+
+/********************************** 
+* show-news.html ********************************/
+.news { color: #000; font-family: "Helvetica Neue", Helvetica, sans-serif; }
+.news .content-block { color: #000; }
+.news .news-title { border-bottom: 1px solid #000; }
+.news .news-title h1 { margin: .17rem .5rem 0; }
+.news .news-title .subhead { color: #8e89bf; margin: auto .5rem .17rem; }
+.news .news-head { background-color: #FFF; }
+
+.show-news .pic { text-align: center; }
+.show-news .pic img { width: 100%; }
+.show-news .news-title .subhead { color: #8e89bf; }
+
+/********************************** 
+* hot-news-1.html ********************************/
+.hot-news-1 { background-color: #f8f9ce; }
+.hot-news-1 .content-block { margin: 0; padding: .75rem; }
+.hot-news-1 .news-info { background-color: #f8f9ce; border: 1px solid #585043; padding: .5rem; display: inline-block; margin: .5rem .5rem 0; position: relative; color: #105030; text-align: center; }
+.hot-news-1 .news-info .news-day { font-size: 1.3rem; line-height: 2rem; font-weight: bold; }
+.hot-news-1 .news-info .news-year, .hot-news-1 .news-info .news-type { font-size: .6rem; line-height: .5rem; }
+.hot-news-1 .news-title .subhead { color: #acd257; }
+
+/********************************** 
+* hot-news-2.html ********************************/
+.hot-news-2 { background-color: #feefe1; }
+.hot-news-2 .content-block { margin: 0; padding: .75rem; }
+.hot-news-2 .news-info { background-color: #feefe1; border: 1px solid #c8c5c4; padding: .5rem; display: inline-block; margin: .5rem .5rem 0; position: relative; color: #ea5413; text-align: center; }
+.hot-news-2 .news-info .news-day { font-size: 1.3rem; line-height: 2rem; font-weight: bold; }
+.hot-news-2 .news-info .news-year, .hot-news-2 .news-info .news-type { font-size: .6rem; line-height: .5rem; }
+.hot-news-2 .news-title .subhead { color: #f6b240; }
+
+/********************************** 
+* search.html ********************************/
+.search { background: url(../img/search-bg.jpg) no-repeat center center; background-size: cover; }
+.search .list-block ul, .search .list-block ul::before, .search .list-block ul::after, .search .list-block .item-inner::after { background-color: transparent; }
+.search .list-block input, .search .list-block select { background: #fff; }
+.search .list-block ul li { margin-bottom: .5rem; }
+.search button { display: inline-block; width: 30%; background-color: #fff !important; min-width: 100px; color: #8c8c8c !important; cursor: pointer; }
+
+/********************************** 
+* result.html ********************************/
+.media-list li .item-mark { width: .6rem; height: 4.05rem; margin-left: .5rem; }
+
+.media-list li:nth-child(odd) .item-mark { background-color: #eeed6f; }
+
+.media-list li:nth-child(even) .item-mark { background-color: #badec2; }
+
+/********************************** 
+* company.html ********************************/
+.company { font-family: "Helvetica Neue", Helvetica, sans-serif; color: #8c8d8c; }
+.company h1 { color: #000; font-size: 1rem; margin: .5rem 0; }
+
+.swiper-container { padding-bottom: 0; }
+
+.swiper-slide img { width: 100%; text-align: center; }
+
+.about-us { color: #009eb6; font-weight: bold; }
+
+.company-dl dt { color: #164192; float: left; margin-right: 10px; font-weight: bold; }
+.company-dl dd { float: left; margin-left: 0; }
+
+/********************************** 
+* show.html ********************************/
+.grid .col-50 { margin-bottom: .5rem; border: 1px solid #c4c0bf; }
+.grid .pic { border-bottom: 2px solid #c4c0bf; line-height: 1px; max-height: 5rem; overflow: hidden; }
+.grid .pic img { width: 100%; display: block; }
+.grid .grid-title { color: #3f3532; font-size: .75rem; padding: 0 .5rem; }
+.grid .subhead { padding: 0 .5rem; font-size: 0.55rem; }
+
+/********************************** 
+* e-press.html ********************************/
+.e-press .col-33 { margin-bottom: .5rem; }
+.e-press .press-title { color: #000; display: block; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; width: 100%; text-align: center; }
+.e-press .row img { width: 100%; height: auto; display: block; }
+.e-press .item-inner { padding-right: 0; display: inline-block; }
+
+/********************************** 
+* e-press-detail.html ********************************/
+.press-detail { background-color: #5dc2d0; }
+.press-detail .news-title { color: #fff; border-bottom: 1px solid #fff; padding-bottom: 10px; }
+.press-detail .news-title h1 { margin: 0; }
+.press-detail .news-title .subhead { margin: 0; color: #fff100; }
+.press-detail .news-title .subhead span { margin-left: 15px; }
+.press-detail .news-head { background-color: #FFF; }
+.press-detail .read { color: #fff; }
+.press-detail .read .iconfont { font-size: 1rem; color: #fff; margin-right: 5px; }
+
+.press-intro { color: #fff; padding: 0 1rem; margin: 0; }
+.press-intro h1 { font-weight: 300; font-size: 1rem; }
+.press-intro .press-logo { width: auto; max-width: 250px; padding: 20px 0 10px; }
+.press-intro p { margin: 10px 0; font-size: .75rem; font-weight: 300; }

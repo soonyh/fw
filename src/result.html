@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FASTENER</title>
+  @@global-css
+</head>
+
+<body>
+  <div class="page-group">
+    <div class="page">
+      @@global-header @@global-bar-tab
+      <!-- content應該擁有"pull-to-refresh-content"類,表示啟用下拉刷新 -->
+      <div class="content infinite-scroll" data-ptr-distance="55">
+        <div class="list-block media-list">
+          <ul id="tab1-ul">
+          </ul>
+        </div>
+        <!-- 加載提示符 -->
+        <div class="infinite-scroll-preloader hidden">
+          <div class="preloader">
+          </div>
+        </div>
+      </div>
+    </div>
+    @@global-panel
+  </div>
+  @@global-js
+  <!-- 列表 模板 -->
+  <script type="text/html" id="art-item">
+    {{each list}}
+    <li>
+      <a class="item-content item-link" href="{{$value.link}}">
+        <div class="item-media">
+          <div class="item-mark"></div>
+        </div>
+        <div class="item-inner">
+          <div class="item-title-row">
+            <div class="item-title">{{$value.title}}</div>
+          </div>
+          <div class="item-subtitle">{{$value.subhead}}</div>
+          <div class="item-text">{{$value.summary}}</div>
+        </div>
+      </a>
+    </li>
+    {{/each}}
+  </script>
+  <script src="resources/js/result.js"></script>
+
+  <script>
+    App.init();
+    Result.init()
+  </script>
+
+</body>
+
+</html>
