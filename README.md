@@ -9,7 +9,7 @@
 
 ##效果
 
-[入口页面](https://soonyh.github.io/fw/cover.html)
+入口页面：[https://soonyh.github.io/fw/cover.html](https://soonyh.github.io/fw/cover.html)
 
     
 
