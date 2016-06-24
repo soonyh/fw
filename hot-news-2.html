@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FASTENER</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="resources/plugins/sui/css/sm.min.css">
+<link rel="stylesheet" href="resources/plugins/sui/css/sm-extend.min.css">
+<link rel="stylesheet" href="resources/css/custom.css">
+
+</head>
+
+<body>
+  <div class="page-group">
+    <div class="page">
+      <header class="bar bar-nav">
+  <a class="open-panel pull-left iconfont icon-menu icon" data-panel='#panel-left'> </a>
+  <a class="pull-right iconfont icon-search1 icon" href="search.html"> </a>
+  <h1 class="title"><i class="iconfont icon-logo"></i></h1> 
+</header>
+
+ <nav class="bar bar-tab" id="footer-nav">
+  <a class="tab-item" href="hot.html"> <span class="icon iconfont icon-article"></span> <span class="tab-label">最新消息</span> </a>
+  <a class="tab-item" href="show.html"> <span class="icon iconfont icon-globe"></span> <span class="tab-label">展覽訊息</span> </a>
+  <a class="tab-item" href="e-press-detail.html"> <span class="icon iconfont icon-book"></span> <span class="tab-label">電子刊物</span> </a>
+  <a class="tab-item" href="search.html"> <span class="icon iconfont icon-search"></span> <span class="tab-label">搜尋介面</span> </a>
+</nav>
+
+
+      <div class="content news hot-news-1">
+        <div class="news-head">
+          <div class="news-info">
+            <div class="news-year">2016</div>
+            <div class="news-day">12/29</div>
+            <div class="news-type">世界大会</div>
+          </div>
+          <div class="news-title">
+            <h1>德國科隆五金展德國科隆五金展德國科隆五金展</h1>
+            <div class="subhead vine">03/06 intersfsd sdf sa fdsd</div>
+          </div>
+        </div>
+        <div class="content-block">
+          <p>謀求復興的沃爾沃，亦將目光鎖定到了緊湊型細分市場。近日，沃爾沃在瑞典哥德堡正式發布了其全新CMA（Compact Modular Architecture）豪華緊湊型整車平臺架構，填補了其在緊湊級產品線平臺的空白，這壹做法被視為推動沃爾沃實現持續性增長的重要因素。</p>
+          <p>4月，沃爾沃在華銷量為6280輛，較去年同期的6732輛同比下跌6.7%，同期，沃爾沃在瑞典銷量達6635輛，較去年4月的6017輛同比提升了10.3%。由此，瑞典超過中國成為沃爾沃第壹大單壹市場。比起2013~2014年在華的高速增長，沃爾沃目前在華市場表現顯然難以令人滿意。</p>
+        </div>
+      </div>
+    </div>
+    <div class="panel-overlay"></div>
+<!-- Left Panel with Reveal effect -->
+<div class="panel panel-left panel-reveal panel-fw" id='panel-left'>
+  <ul>
+    <li><a href="hot.html" class="active"><i class="icon iconfont icon-article"></i> 最新消息</a>
+    </li>
+    <li><a href="show.html" class=""><i class="icon iconfont icon-globe"></i> 展覽訊息</a>
+    </li>
+    <li><a href="e-press.html" class=""><i class="icon iconfont icon-book"></i> 電子刊物</a>
+    </li>
+    <li><a href="search.html" class=""><i class="icon iconfont icon-search"></i> 搜尋介面</a>
+    </li>
+  </ul>
+  <a class="bar-logo" href="home.html"><i class="iconfont icon-logo" style="font-size: 1.8rem;"></i></a>
+</div>
+
+  </div>
+  <script type='text/javascript' src='resources/plugins/zepto.min.js' charset='utf-8'>
+</script>
+<script>
+  $.config = {router: false}
+</script>
+<script type='text/javascript' src='resources/plugins/sui/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='resources/plugins/template.js' charset='utf-8'></script>
+<script type='text/javascript' src='resources/js/app.js' charset='utf-8'></script>
+<!-- build:remove -->
+<script type='text/javascript' src='mock/mock.js' charset='utf-8'></script>
+<script>
+  var Random = Mock.Random;
+  Mock.setup({
+    timeout: 1500
+  });
+  Mock.mock(/list1.json/, {
+    'list|1-5': [{
+      "title": "@word(5,15)",
+      "subhead": "@word(15,25)",
+      "category":1,
+      "summary": "@paragraph",
+      "link": "hot-news-1.html",
+      "pic": function() {
+        return Random.dataImage('450x500', 'Hello!')
+      },
+      "year": 2016,
+      "day": function() {
+        return Random.date('MM/dd')
+      },
+      "type|1": ["五金建材", "美洲新闻", "世界大会", "科技资讯"]
+    }]
+  })
+  Mock.mock(/list2.json/, {
+    'list|1-5': [{
+      "title": "@word(5,15)",
+      "subhead": "@word(15,25)",
+      "category":2,
+      "summary": "@paragraph",
+      "link": "hot-news-2.html",
+      "pic": function() {
+        return Random.dataImage('450x500', 'Hello!')
+      },
+      "year": 2016,
+      "day": function() {
+        return Random.date('MM/dd')
+      },
+      "type|1": ["五金建材", "美洲新闻", "世界大会", "科技资讯"]
+    }]
+  })
+  Mock.mock(/list3.json/, {
+    'list|5-8': [{
+      "title": "@word(5,15)",
+      "summary": "@paragraph",
+      "link": "company.html"
+    }]
+  })
+
+  Mock.mock(/list4.json/, {
+    'list|1-5': [{
+      "title": "@word(5,15)",
+      "subhead": "@word(15,25)",
+      "category":1,
+      "link": "show-news.html",
+      "pic|1":['resources/pic/2.jpg','resources/pic/3.jpg','resources/pic/4.jpg']
+    }]
+  })
+  Mock.mock(/list5.json/, {
+    'list|1-5': [{
+      "title": "@word(5,15)",
+      "subhead": "@word(15,25)",
+      "category":2,
+      "link": "show-news.html",
+      "pic|1":['resources/pic/2.jpg','resources/pic/3.jpg','resources/pic/4.jpg']
+    }]
+  })
+  Mock.mock(/list6.json/, {
+    'list|1-6': [{
+      "title": "@word(5,15)",
+      "link": "e-press-detail.html?id=1",
+      "pic|1":['resources/pic/e1.jpg','resources/pic/e2.jpg','resources/pic/e3.jpg']
+    }]
+  })
+</script>
+<!-- /build -->
+
+  <script>
+   App.init();
+  </script>
+</body>
+
+</html>
